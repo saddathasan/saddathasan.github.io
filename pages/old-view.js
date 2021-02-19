@@ -35,6 +35,10 @@ const Home = ({ slugs }) => (
           </>
         );
       })}
+      <div>
+        <p> </p>
+        <Link href="/"> Go Back </Link>
+      </div>
     </div>
   )
 );
