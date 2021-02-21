@@ -3,9 +3,20 @@ import PostCard from "./post-cards";
 
 const Home = () => {
   return (
-    <div>
-      <PostCard />
+    <div class="cointainer mx-auto">
+      <div class="flex justify-evenly item-center flex-row ">
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+      </div>
+
       <div>
+        <div>
+          <Link href="pace4life">go to pace4life poc</Link>
+        </div>
         <div>
           <p />
         </div>

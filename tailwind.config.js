@@ -1,4 +1,6 @@
-const colors = require("../saddathasan.github.io/utils/colors.js");
+// const colors = require("../saddathasan.github.io/utils/colors.js");
+const colors = require("./utils/colors.js");
+
 
 module.exports = {
   purge: [],
