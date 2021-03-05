@@ -6,26 +6,32 @@ import { useEffect } from "react";
 // const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const Home = ({ slugs }) => (
-  useEffect(() => {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", (user) => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  }, []),
+
+  //==========useEffect============
+
+  // useEffect(() => {
+  //   if (window.netlifyIdentity) {
+  //     window.netlifyIdentity.on("init", (user) => {
+  //       if (!user) {
+  //         window.netlifyIdentity.on("login", () => {
+  //           document.location.href = "/admin/";
+  //         });
+  //       }
+  //     });
+  //   }
+  // }, []),
+
+  //==========useEffect============
+
   (
     <div>
       slugs:
       {slugs.map((slug) => {
         return (
           <>
-            <Head>
+            {/* <Head>
               <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-            </Head>
+            </Head> */}
 
             {/* <div key={slug}>
               <Link href={"/blog/" + slug}>

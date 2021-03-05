@@ -1,8 +1,28 @@
 import Link from "next/link";
 import PostCard from "./post-cards";
+import Head from "next/head";
 
 const Home = () => {
+
+   useEffect(() => {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", (user) => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  }, []),
+
   return (
+    <>
+    <Head>
+      <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </Head>
+
+  
     <div class="cointainer mx-auto">
       <div class="flex justify-evenly item-center flex-row ">
         <PostCard />
@@ -25,6 +45,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
