@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PostCard from "./post-cards";
 import Head from "next/head";
+import { useEffect } from "react";
 
 const Home = () => {
 
@@ -14,7 +15,7 @@ const Home = () => {
         }
       });
     }
-  }, []),
+  }, []);
 
   return (
     <>
